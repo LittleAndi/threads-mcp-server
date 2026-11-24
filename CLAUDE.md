@@ -10,7 +10,8 @@ Owner: LittleAndi (https://github.com/LittleAndi). This is a public repo, a sibl
 
 - `docs/threads-api.md`: what the Threads API allows, its limits, and what
   is still unverified. Check it before writing any endpoint code.
-- `docs/plan.md`: the tool list, the build phases and the open questions.
+- `docs/design.md`: the tool list and design decisions. Build work and open
+  questions are GitHub issues in the v0.1.0 milestone.
 
 ## Conventions
 

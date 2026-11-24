@@ -2,7 +2,7 @@
 
 Read-only MCP server for the [Meta Threads API](https://developers.facebook.com/documentation/threads): search posts, look up profiles, and read your own posts, replies and insights.
 
-> **Status: early development.** Nothing is implemented yet. The tools below are planned. See [docs/plan.md](docs/plan.md).
+> **Status: early development.** Nothing is implemented yet. The tools below are planned. See [docs/design.md](docs/design.md) and the [v0.1.0 milestone](https://github.com/LittleAndi/threads-mcp-server/milestone/1).
 
 ## Read this first: App Review limits what search can see
 
@@ -52,7 +52,7 @@ Detailed setup, token refresh and example prompts will be added as the tools are
 ## Documentation
 
 - [docs/threads-api.md](docs/threads-api.md): what the Threads API allows, its limits, and what is still unverified.
-- [docs/plan.md](docs/plan.md): tool list, build phases and open questions.
+- [docs/design.md](docs/design.md): tool list and design decisions.
 
 ## License
 

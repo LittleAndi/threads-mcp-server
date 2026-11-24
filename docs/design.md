@@ -1,4 +1,6 @@
-# Plan
+# Design
+
+Build work and open questions are tracked in the [v0.1.0 milestone](https://github.com/LittleAndi/threads-mcp-server/milestone/1). This file holds the design decisions only.
 
 ## Why
 
@@ -47,39 +49,6 @@ This server lets an MCP client work with Threads. It has two goals:
   to expiry (for example 7 days left), refresh it and persist the new one.
 - Error clearly when the token is expired and needs re-authorisation.
   Never print the token.
-
-## Phases
-
-0. **Docs check (Meta MCP):** work through the *unverified* items in
-   `docs/threads-api.md` using the Meta developer tools MCP server, and
-   check the App Review requirements. See "Verifying with the Meta MCP"
-   there for what it can and cannot cover.
-1. **Spike (manual):** create the Meta app (Threads use case), add
-   your account as a tester, get a token in the Graph API Explorer,
-   call `/keyword_search` and `/me/threads`. Record the actual response
-   shapes in `docs/threads-api.md` and clear the *unverified* markers.
-2. **Scaffold:** copy the structure and tooling from `smhi-mcp-server`.
-   Add config, an HTTP client with error mapping (Graph API error object
-   → readable MCP error) and the token loader.
-3. **Own-data tools:** `get_my_posts`, `get_post`, `get_post_insights`,
-   `get_account_insights`, `get_replies`.
-4. **Search:** `search_posts` and `get_search_quota`.
-5. **Discovery:** `get_profile` and `get_profile_posts`. Test them against
-   a tester account until approval.
-6. **Docs and release:** README with setup (Meta app creation, token flow),
-   the App Review limitation stated up front, example prompts.
-7. **App Review (parallel):** privacy policy and ToS pages (e.g. GitHub
-   Pages), screencast script, submit `threads_keyword_search` and
-   `threads_profile_discovery`.
-
-## Open questions
-
-- Can an individual (no business verification) pass App Review for
-  `threads_keyword_search`?
-- Does `/keyword_search` paginate?
-- Is there an API that reports keyword-search quota?
-- Exact insights metric names, and whether follower vs non-follower views
-  are exposed.
 
 ## Out of scope
 
